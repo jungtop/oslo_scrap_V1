@@ -1,0 +1,99 @@
+id: 9b7d4e3ae86e4957a38dcd06d8c882b4
+annotation_type: Segment
+revision: '00001'
+annotations:
+  c182abbc45584ffe874cdc8f1ee9fcbc:
+    span:
+      start: 0
+      end: 81
+    metadata: {}
+  4e05fc0080924643ac30b636e9fc9400:
+    span:
+      start: 85
+      end: 1106
+    metadata: {}
+  50d7060f5c8b4fa5a243f9c38141adc4:
+    span:
+      start: 1110
+      end: 1569
+    metadata: {}
+  155ecbf29de04fbaab2afa0e988e3cc4:
+    span:
+      start: 1573
+      end: 2720
+    metadata: {}
+  7beff551b4624db2a4e0810bac6082b5:
+    span:
+      start: 2724
+      end: 4806
+    metadata: {}
+  f1572b36c170437b90a2d2eacbe6aa79:
+    span:
+      start: 4810
+      end: 5499
+    metadata: {}
+  b8f1eb39c6c84f488778562a087d044b:
+    span:
+      start: 5503
+      end: 7054
+    metadata: {}
+  18dc405504234f41a9bc895b03f77ab6:
+    span:
+      start: 7058
+      end: 7761
+    metadata: {}
+  841fc554158a49bdb9796b970c5cf588:
+    span:
+      start: 7765
+      end: 7865
+    metadata: {}
+  d17070f68bef47b0a94b4d8f7535a843:
+    span:
+      start: 7869
+      end: 8412
+    metadata: {}
+  40e7742f19ea459a8c082e989748f512:
+    span:
+      start: 8416
+      end: 8848
+    metadata: {}
+  47f8fcaf8da24d648ab943da30e381fc:
+    span:
+      start: 8852
+      end: 9304
+    metadata: {}
+  7fd01bfb01404e2abe41a8462e37279e:
+    span:
+      start: 9308
+      end: 9806
+    metadata: {}
+  fa9360ebfeba46b78cbac691e65d1e00:
+    span:
+      start: 9810
+      end: 10298
+    metadata: {}
+  84b0f37927c547efa054df174f46df83:
+    span:
+      start: 10302
+      end: 10845
+    metadata: {}
+  75b3c35b7f95441eae4194da9e86d1b8:
+    span:
+      start: 10849
+      end: 11275
+    metadata: {}
+  0148f17b2d714f10921a3b125d9b2425:
+    span:
+      start: 11279
+      end: 12488
+    metadata: {}
+  cf686ad1521e413085c806f62b734006:
+    span:
+      start: 12492
+      end: 14615
+    metadata: {}
+  e334915359cc497fab6719e238d1f091:
+    span:
+      start: 14619
+      end: 16099
+    metadata: {}

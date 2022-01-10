@@ -6,14 +6,15 @@ from uuid import uuid4
 
 def create_opf(opf_path,base_text,filename):
     opf = OpenPechaFS(opf_path=opf_path)
-    layers = {filename: {LayerEnum.segment: get_segment_layer(base_text)}}
+    layers = {f"v{filename}": {LayerEnum.segment: get_segment_layer(base_text)}}
 
-    bases = {filename:get_base_text(base_text)}
+    bases = {f"v{filename}":get_base_text(base_text)}
 
     opf.layers = layers
     opf.base = bases
     opf.save_base()
     opf.save_layers()
+    
 
 def get_base_text(base_texts):
     text = ""

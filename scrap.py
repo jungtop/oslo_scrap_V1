@@ -1,12 +1,17 @@
 from os import write
 from requests.models import Response
 from requests_html import HTMLSession
-from create_opf import create_opf
+from openpecha.core.ids import get_pecha_id
+from datetime import datetime
+from openpecha.core.layer import InitialCreationEnum, Layer, LayerEnum, PechaMetaData
+from openpecha.core.pecha import OpenPechaFS 
+from openpecha.core.annotation import AnnBase, Span
+from uuid import uuid4
 
 
 start_url = "https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2"
 pre_url = "https://www2.hf.uio.no/"
-
+lang = []
 def make_request(url):
     s=HTMLSession()
     response =s.get(url)
@@ -38,9 +43,9 @@ def parse_page(item):
 
     links_iter = iter(nav_bar)
 
-    opf_path = response.html.find('div.headline',first=True).text
-
-    opf_path = f"{opf_path}/{opf_path}.opf"
+    pecha_name = response.html.find('div.headline',first=True).text
+    pecha_id = get_pecha_id()
+    opf_path = f"{pecha_id}/{pecha_id}.opf"
 
     par_dir = None
     prev_dir = ""
@@ -62,7 +67,35 @@ def parse_page(item):
                 par_dir = None
             parse_final(link,opf_path,par_dir)
             
+    create_description(pecha_id,pecha_name)
+    save_meta(pecha_name,opf_path)
 
+
+def save_meta(pecha_name,opf_path):
+    global lang
+    opf = OpenPechaFS(opf_path=opf_path)
+    source_metadata = {
+        "id": "",
+        "title": pecha_name,
+        "language": list(set(lang)),
+        "author": "",
+    }
+
+    instance_meta = PechaMetaData(
+        initial_creation_type=InitialCreationEnum.input,
+        created_at=datetime.now(),
+        last_modified_at=datetime.now(),
+        source_metadata=source_metadata)    
+
+    opf._meta = instance_meta
+    opf.save_meta()
+
+
+def create_description(pecha_id,pecha_name):
+    path = f"{pecha_id}/{pecha_id}.opf/README.md"
+
+    with open(path,"w") as f:
+        f.write(f"# {pecha_name}")
 
 
 def parse_final(link,opf_path,par_dir):
@@ -75,14 +108,12 @@ def parse_final(link,opf_path,par_dir):
     filename = link.text if par_dir == None else f"{par_dir}_{link.text}"
     create_opf(opf_path,base_text,filename)    
 
-    """ with open(f"file/{link.text}.txt","w") as f:
-        for text in base_text:
-            f.write(text)
-            f.write("************************************\n") """
 
 def write_file(divs):
+    global lang
     base_text=""
     for div in divs:
+        lang.append(div.attrs["class"][0])
         spans = div.find('span')
         for span in spans:
             if len(span.text) != 0:
@@ -92,6 +123,56 @@ def write_file(divs):
         else:
             base_text+="\n\n"    
     return base_text
+
+
+
+def create_opf(opf_path,base_text,filename):
+    opf = OpenPechaFS(opf_path=opf_path)
+    layers = {f"v{filename}": {LayerEnum.segment: get_segment_layer(base_text)}}
+
+    bases = {f"v{filename}":get_base_text(base_text)}
+
+    opf.layers = layers
+    opf.base = bases
+    opf.save_base()
+    opf.save_layers()
+    
+
+def get_base_text(base_texts):
+    text = ""
+
+    for base_text in base_texts:
+        if base_text:
+            text+=base_text+"\n"
+
+    return text    
+
+def get_segment_layer(base_texts):
+
+    segment_annotations = {}
+    char_walker =0
+    for base_text in base_texts:
+        if base_text:
+            segment_annotation = get_segment_annotation(base_text,char_walker)
+            segment_annotations.update(segment_annotation)
+
+        char_walker += len(base_text)+1
+
+    segment_layer = Layer(annotation_type= LayerEnum.segment,
+    annotations=segment_annotations
+    )        
+
+    return segment_layer
+
+
+def get_segment_annotation(base_text,char_walker):
+    
+    segment_annotation = {
+        uuid4().hex:AnnBase(span=Span(start=char_walker, end=char_walker + len(base_text) - 3))
+    }
+
+    return segment_annotation
+
 
 if __name__ == "__main__":
     values = get_page()
