@@ -104,25 +104,29 @@ def parse_final(link,opf_path,par_dir):
     content = response.html.find('div.infofulltekstfelt div.BolkContainer')
     for block in content:
         div = block.find('div.textvar div.Tibetan,div.Chinese,div.English,div.Sanskrit')
-        base_text.append(write_file(div))
+        text = write_file(div)
+        if len(text) != 0:
+            base_text.append(text)
     filename = link.text if par_dir == None else f"{par_dir}_{link.text}"
     create_opf(opf_path,base_text,filename)    
 
 
 def write_file(divs):
     global lang
-    base_text=""
+    base_list = []
     for div in divs:
+        base_text=""
         lang.append(div.attrs["class"][0])
         spans = div.find('span')
         for span in spans:
             if len(span.text) != 0:
                 base_text+=span.text
         if len(spans) == 1 and len(spans[0].text) == 0:
-            base_text+=""
+            pass
         else:
-            base_text+="\n\n"    
-    return base_text
+            base_text+="\n\n"
+            base_list.append({"text":base_text,"lang":div.attrs["class"][0]})
+    return base_list
 
 
 
@@ -142,21 +146,22 @@ def get_base_text(base_texts):
     text = ""
 
     for base_text in base_texts:
-        if base_text:
-            text+=base_text+"\n"
-
+        for base in base_text:
+            if base["text"]:
+                text+=base["text"]
+        text+="\n"
     return text    
 
 def get_segment_layer(base_texts):
 
     segment_annotations = {}
     char_walker =0
+    metas = {}
     for base_text in base_texts:
-        if base_text:
-            segment_annotation = get_segment_annotation(base_text,char_walker)
-            segment_annotations.update(segment_annotation)
+        segment_annotation,end = get_segment_annotation(char_walker,base_text)
+        segment_annotations.update(segment_annotation)
 
-        char_walker += len(base_text)+1
+        char_walker += end+1
 
     segment_layer = Layer(annotation_type= LayerEnum.segment,
     annotations=segment_annotations
@@ -165,19 +170,30 @@ def get_segment_layer(base_texts):
     return segment_layer
 
 
-def get_segment_annotation(base_text,char_walker):
+def get_segment_annotation(char_walker,base_text):
+
+    metas = {}
+    base_walker = char_walker
+    text=""
+
+    for base in base_text:
+        if base["text"]:
+            text+=base["text"]
+        meta = {uuid4().hex:{"span":{"start":base_walker,"end":base_walker+len(base["text"])-3},"lang":base["lang"]}}
+        base_walker = base_walker + len(base["text"])
+        metas.update(meta)
     
     segment_annotation = {
-        uuid4().hex:AnnBase(span=Span(start=char_walker, end=char_walker + len(base_text) - 3))
+        uuid4().hex:AnnBase(span=Span(start=char_walker, end=char_walker + len(text) - 3),metadata=metas)
     }
 
-    return segment_annotation
+    return (segment_annotation,len(text))
 
 
 if __name__ == "__main__":
     values = get_page()
     for val in values:
-        parse_page('https://www2.hf.uio.no/polyglotta/index.php?page=volume&vid=424')  
+        parse_page('https://www2.hf.uio.no/polyglotta/index.php?page=volume&vid=1124')  
         break  
 
 
