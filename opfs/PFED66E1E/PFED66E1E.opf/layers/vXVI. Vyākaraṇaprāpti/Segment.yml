@@ -1,0 +1,44 @@
+id: c31f7d9c611142859cac5e79a9f01ebc
+annotation_type: Segment
+revision: '00001'
+annotations:
+  c86c521eebf14b3ab0a675e0117c16f5:
+    span:
+      start: 0
+      end: 59
+    metadata:
+      e86047827a424c51861e23440dfb2b63:
+        span:
+          start: 0
+          end: 19
+        lang: Sanskrit
+      49e17291eb5a4eec9d6b8c63b2a1e1bb:
+        span:
+          start: 22
+          end: 59
+        lang: English
+  d43830361336453996ac217cc718588e:
+    span:
+      start: 63
+      end: 1400
+    metadata:
+      4209521c880549a0a013acc6e8c64424:
+        span:
+          start: 63
+          end: 165
+        lang: Tibetan
+      5b10e7829c6f4b8d8c6dad9425fa38a6:
+        span:
+          start: 168
+          end: 250
+        lang: Sanskrit
+      44e4a742cf774f7f92f46b756c7559e7:
+        span:
+          start: 253
+          end: 347
+        lang: English
+      da8481cea6c143b2808397e8e001c425:
+        span:
+          start: 350
+          end: 1400
+        lang: Tibetan

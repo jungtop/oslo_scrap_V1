@@ -32,7 +32,7 @@ def get_page():
         yield item
 
 def parse_page(item):
-    response = make_request(item)
+    response = make_request(item['ref'])
     links = response.html.find('div.venstrefelt table a',first=True)
     response = make_request(pre_url+links.attrs['href'])
     coninuous_bar = response.html.find('div.divControlMain li#nav-2 a',first=True)
@@ -41,19 +41,19 @@ def parse_page(item):
     response = make_request(pre_url+coninuous_bar_href)
     nav_bar = response.html.find('div.venstrefulltekstfelt table a')
 
-    links_iter = iter(nav_bar)
+    link_iter = iter(nav_bar)
 
     pecha_name = response.html.find('div.headline',first=True).text
     pecha_id = get_pecha_id()
-    opf_path = f"{pecha_id}/{pecha_id}.opf"
+    opf_path = f"./opfs/{pecha_id}/{pecha_id}.opf"
 
     par_dir = None
     prev_dir = ""
     
-    for link in links_iter:
+    for link in link_iter:
         
         if 'onclick' in link.attrs:
-            nxt  = next(links_iter)    
+            nxt  = next(link_iter)    
 
             if nxt.attrs['class'][0] == "ajax_tree0":
                 par_dir = None
@@ -92,7 +92,7 @@ def save_meta(pecha_name,opf_path):
 
 
 def create_description(pecha_id,pecha_name):
-    path = f"{pecha_id}/{pecha_id}.opf/README.md"
+    path = f"./opfs/{pecha_id}/{pecha_id}.opf/README.md"
 
     with open(path,"w") as f:
         f.write(f"# {pecha_name}")
@@ -191,9 +191,9 @@ def get_segment_annotation(char_walker,base_text):
 
 
 if __name__ == "__main__":
-    values = get_page()
-    for val in values:
-        parse_page('https://www2.hf.uio.no/polyglotta/index.php?page=volume&vid=1124')  
+    for val in get_page():
+        print(val)
+        parse_page(val)  
         break  
 
 

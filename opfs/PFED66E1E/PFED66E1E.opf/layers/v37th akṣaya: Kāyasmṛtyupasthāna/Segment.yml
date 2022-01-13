@@ -1,0 +1,394 @@
+id: 2fd5e2da2660473bad3c546cf0548053
+annotation_type: Segment
+revision: '00001'
+annotations:
+  452cc91449024609aac00eea945d2f47:
+    span:
+      start: 0
+      end: 126
+    metadata:
+      b709d3897f4a401fbca5bde789bc8ebf:
+        span:
+          start: 0
+          end: 32
+        lang: Sanskrit
+      84fe106d05314198bb0be00751c9fdf0:
+        span:
+          start: 35
+          end: 126
+        lang: English
+  d8086226be5f44b1b0e694fe4804e680:
+    span:
+      start: 130
+      end: 1838
+    metadata:
+      d14eb09cfba349de962920e2d7936411:
+        span:
+          start: 130
+          end: 227
+        lang: Tibetan
+      d044650254ea4c62b6eb6e4dc2cf0afd:
+        span:
+          start: 230
+          end: 297
+        lang: Sanskrit
+      21c9017ef6ec44be8188d12351113f39:
+        span:
+          start: 300
+          end: 628
+        lang: English
+      03be1584a7e147448693372fe61458c9:
+        span:
+          start: 631
+          end: 1838
+        lang: Tibetan
+  e2f34891fae04c3782b8be3edab17bf5:
+    span:
+      start: 1842
+      end: 2839
+    metadata:
+      27978bfb7e6d488898a6feadd453a7c0:
+        span:
+          start: 1842
+          end: 1969
+        lang: Tibetan
+      f2f2920c83f94fe9918006f84252c8b4:
+        span:
+          start: 1972
+          end: 2054
+        lang: Sanskrit
+      6fe49e937a68440eb712bf8a13de2182:
+        span:
+          start: 2057
+          end: 2372
+        lang: English
+      54abbc32d5be4a73b36223fda2384270:
+        span:
+          start: 2375
+          end: 2839
+        lang: Tibetan
+  a150a37a8831449cbd86ad271c5dda91:
+    span:
+      start: 2843
+      end: 4923
+    metadata:
+      9ce9cc18e6804b91a7ea65b1812e5632:
+        span:
+          start: 2843
+          end: 3393
+        lang: Tibetan
+      09ee0ccef8ec4361a91efbc76bd99116:
+        span:
+          start: 3396
+          end: 3702
+        lang: Sanskrit
+      881c197b20d6414c9107c6ac42a76a09:
+        span:
+          start: 3705
+          end: 4302
+        lang: English
+      465d34798c3744fc845a265a94b47a8b:
+        span:
+          start: 4305
+          end: 4923
+        lang: Tibetan
+  601ddfd5eeff4139b78317831c4cf311:
+    span:
+      start: 4927
+      end: 5254
+    metadata:
+      5d24848a1a5f44e38919c69dd042b986:
+        span:
+          start: 4927
+          end: 5045
+        lang: Tibetan
+      a642f2c45fa745348017c56443eecc38:
+        span:
+          start: 5048
+          end: 5126
+        lang: Sanskrit
+      4aed946dd4114470b1c130f93508141f:
+        span:
+          start: 5129
+          end: 5254
+        lang: English
+  c69370d732a944ea9808247a1987e987:
+    span:
+      start: 5258
+      end: 5348
+    metadata:
+      35b9445bf699403cb2e4ccc7dfafa914:
+        span:
+          start: 5258
+          end: 5278
+        lang: Tibetan
+      e0cd0d90f0444d928f2e1a3245c18fd4:
+        span:
+          start: 5281
+          end: 5301
+        lang: Sanskrit
+      6896c51b4a2e43f588f4a7b99ab35212:
+        span:
+          start: 5304
+          end: 5348
+        lang: English
+  708dd0ed6ee74e82b4c4b3e81fd71210:
+    span:
+      start: 5352
+      end: 6019
+    metadata:
+      d094315cf5594d429be4784e74ea6077:
+        span:
+          start: 5352
+          end: 5588
+        lang: Tibetan
+      5208421999f8400a9281783178dff21c:
+        span:
+          start: 5591
+          end: 5727
+        lang: Sanskrit
+      47cc892bc0ba4c72a4f8cd0cea7b930c:
+        span:
+          start: 5730
+          end: 6019
+        lang: English
+  a5c65a27254144c3816791ec265c741c:
+    span:
+      start: 6023
+      end: 6128
+    metadata:
+      731df88cdcd84c35b0642b12cce8a486:
+        span:
+          start: 6023
+          end: 6053
+        lang: Tibetan
+      c8141c1ae2984368bab079b08feb4a67:
+        span:
+          start: 6056
+          end: 6077
+        lang: Sanskrit
+      5587659343394845b9cd5e6b41082f84:
+        span:
+          start: 6080
+          end: 6128
+        lang: English
+  b6c2e13de8974432b9480b24dcffd8a4:
+    span:
+      start: 6132
+      end: 6997
+    metadata:
+      006c04dc34c64e2fb27650eb54521dce:
+        span:
+          start: 6132
+          end: 6348
+        lang: Tibetan
+      9d2d45c5b2fd4e01bf459b443f640c04:
+        span:
+          start: 6351
+          end: 6483
+        lang: Sanskrit
+      11185661402d4112b85deb8bcac0cc85:
+        span:
+          start: 6486
+          end: 6716
+        lang: English
+      9f6989f27e53497fa5f8f664bed2a081:
+        span:
+          start: 6719
+          end: 6997
+        lang: Tibetan
+  7d7c7e1d0346424395e508b0504116ba:
+    span:
+      start: 7001
+      end: 8318
+    metadata:
+      a946b0b2a4dc49dcbb408037cb66084f:
+        span:
+          start: 7001
+          end: 7291
+        lang: Tibetan
+      5a77cab796bd4a1ebc8339a6615eefb4:
+        span:
+          start: 7294
+          end: 7471
+        lang: Sanskrit
+      7c18fdc901874c81ba04b275effb07ed:
+        span:
+          start: 7474
+          end: 7803
+        lang: English
+      aabc54168d624ae8a77c32963a028fe4:
+        span:
+          start: 7806
+          end: 8318
+        lang: Tibetan
+  84b64c1053464ea28c7bf8aeb70ec190:
+    span:
+      start: 8322
+      end: 15293
+    metadata:
+      508bd3505fca4b58b5b0d0cb86b0a791:
+        span:
+          start: 8322
+          end: 9334
+        lang: Tibetan
+      2a99071c0a6c4524b7c8bbd67a22bb9a:
+        span:
+          start: 9337
+          end: 9976
+        lang: Sanskrit
+      f6860deb40b648689caee3c15ea2a92a:
+        span:
+          start: 9979
+          end: 11094
+        lang: English
+      d2ccd07482674dc184fd4e16778155f0:
+        span:
+          start: 11097
+          end: 15293
+        lang: Tibetan
+  70a427054ea849ffb579fdaa9c202207:
+    span:
+      start: 15297
+      end: 16442
+    metadata:
+      feb04c817d6946d899f1aa1234fcb749:
+        span:
+          start: 15297
+          end: 15594
+        lang: Tibetan
+      7ebe0826af4d4e3181af948510c9a2e4:
+        span:
+          start: 15597
+          end: 15824
+        lang: Sanskrit
+      f916c540fa74425bb485585788b09955:
+        span:
+          start: 15827
+          end: 16279
+        lang: English
+      02349a723993412387cda4f9d8878afc:
+        span:
+          start: 16282
+          end: 16442
+        lang: Tibetan
+  1d730429237b489a83b493406915770e:
+    span:
+      start: 16446
+      end: 18724
+    metadata:
+      1b0f8a4f99e14cfa87712d5eb062359a:
+        span:
+          start: 16446
+          end: 16785
+        lang: Tibetan
+      eeba8403e6a34e09a89826bc0cfee934:
+        span:
+          start: 16788
+          end: 17044
+        lang: Sanskrit
+      2d3af2a78be54355b1ab3b46a24b0b43:
+        span:
+          start: 17047
+          end: 17525
+        lang: English
+      64c64114e9e64781b4cc7ce785f37a6c:
+        span:
+          start: 17528
+          end: 18724
+        lang: Tibetan
+  b020917d1eb545a68962768038d96b19:
+    span:
+      start: 18728
+      end: 19980
+    metadata:
+      9bf71fd0b3194c14bec72f4fdcce5786:
+        span:
+          start: 18728
+          end: 19007
+        lang: Tibetan
+      0b5cb0bbe98041ab900251c334cf9be8:
+        span:
+          start: 19010
+          end: 19217
+        lang: Sanskrit
+      e4522f4990014cd6868c2107e22d64b8:
+        span:
+          start: 19220
+          end: 19647
+        lang: English
+      d776a508b7cd44c6a91ef00e7abfceb6:
+        span:
+          start: 19650
+          end: 19980
+        lang: Tibetan
+  6f848699996d4a5b9ac6fea19ec6890d:
+    span:
+      start: 19984
+      end: 22957
+    metadata:
+      de3ad95c0cd04cff99d9c78a7f7d47a2:
+        span:
+          start: 19984
+          end: 20487
+        lang: Tibetan
+      675bcc07d21b4f6c88aabbdf0a8049f6:
+        span:
+          start: 20490
+          end: 20840
+        lang: Sanskrit
+      6ef9057418de4d9c930002212722f42f:
+        span:
+          start: 20843
+          end: 21483
+        lang: English
+      f352261e8cc14dc3b9269f0780911c14:
+        span:
+          start: 21486
+          end: 22957
+        lang: Tibetan
+  0efd1737deee451cb989ad5b9d7193b6:
+    span:
+      start: 22961
+      end: 23247
+    metadata:
+      b7fb7f39558347f1bd7ec7531262b22a:
+        span:
+          start: 22961
+          end: 23059
+        lang: Tibetan
+      4c3bdd64ad30477b90411b3558057cee:
+        span:
+          start: 23062
+          end: 23127
+        lang: Sanskrit
+      2ad4edc209294b2b8fe4733287ea6f56:
+        span:
+          start: 23130
+          end: 23247
+        lang: English
+  5ef380e23c1a4c2498c4b416cd479f9c:
+    span:
+      start: 23251
+      end: 23703
+    metadata:
+      d39e6746fe414936bcf93f488f0daf1f:
+        span:
+          start: 23251
+          end: 23365
+        lang: Tibetan
+      948e85694f4d4d4abca8a660724839db:
+        span:
+          start: 23368
+          end: 23458
+        lang: Sanskrit
+      f1705fa1475d4e85a2d5fddde275e75d:
+        span:
+          start: 23461
+          end: 23584
+        lang: English
+      9fb98fd609464f0d99606fe89070d0d9:
+        span:
+          start: 23587
+          end: 23703
+        lang: Tibetan

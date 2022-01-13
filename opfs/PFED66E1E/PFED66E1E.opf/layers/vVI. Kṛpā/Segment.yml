@@ -1,0 +1,19 @@
+id: 2c6e7c7eefc34caeb9d62c367475133b
+annotation_type: Segment
+revision: '00001'
+annotations:
+  751e41dbab494f7fae14a87d38dd6518:
+    span:
+      start: 0
+      end: 25
+    metadata:
+      8ad2e0baa1dc48adb75012d7e41be85a:
+        span:
+          start: 0
+          end: 7
+        lang: Sanskrit
+      1c487c5da5764d1b9870124abccc985c:
+        span:
+          start: 10
+          end: 25
+        lang: English

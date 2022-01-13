@@ -1,0 +1,89 @@
+id: 5a9d30d1f7e741a78dabd8e862e3965b
+annotation_type: Segment
+revision: '00001'
+annotations:
+  190a07a54b5d4f5fbd01abb2cade25a9:
+    span:
+      start: 0
+      end: 52
+    metadata:
+      dc28037524874cdb9d59ce507e4fe31c:
+        span:
+          start: 0
+          end: 16
+        lang: Sanskrit
+      7c75d93a32db47fc9e450d7f0f5752d8:
+        span:
+          start: 19
+          end: 52
+        lang: English
+  4e4669708aed41a9bea7002c9b4dd89f:
+    span:
+      start: 56
+      end: 4411
+    metadata:
+      8d707854334c4fa99e5f5e72aa96faec:
+        span:
+          start: 56
+          end: 175
+        lang: Tibetan
+      c5e9640843094a3b99eb292509764841:
+        span:
+          start: 178
+          end: 270
+        lang: Sanskrit
+      248e1e27c6474229a4872917d02dd879:
+        span:
+          start: 273
+          end: 403
+        lang: English
+      1a7dcdaa74fe4e87957a0866ca832691:
+        span:
+          start: 406
+          end: 4411
+        lang: Tibetan
+  8bfe77d71e2d485e93ce9d8f67c506df:
+    span:
+      start: 4415
+      end: 4460
+    metadata:
+      632273fa47d045c890ec70814a8471cf:
+        span:
+          start: 4415
+          end: 4428
+        lang: Tibetan
+      73d34fec632f46ceb0ddac8d9e5c0773:
+        span:
+          start: 4431
+          end: 4447
+        lang: Sanskrit
+      d7b21fec52e84fe5b5b0e2314c014952:
+        span:
+          start: 4450
+          end: 4460
+        lang: English
+  d570570219bb44d8959708b26b5c1873:
+    span:
+      start: 4464
+      end: 5222
+    metadata:
+      4224b823cf2c46c7b0c6c77cbc9f1bad:
+        span:
+          start: 4464
+          end: 4720
+        lang: Tibetan
+      0a46f888420b4e0ba96eabf506a14f7e:
+        span:
+          start: 4723
+          end: 4887
+        lang: Sanskrit
+      8311d0322ccb4f2e9a662764f31673b6:
+        span:
+          start: 4890
+          end: 5220
+        lang: English
+      2713f8ae130d4dd087724a5257717f7a:
+        span:
+          start: 5223
+          end: 5222
+        lang: Tibetan
